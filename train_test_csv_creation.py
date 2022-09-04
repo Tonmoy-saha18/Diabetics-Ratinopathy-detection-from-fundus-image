@@ -22,7 +22,7 @@ def create_train_test_csv():
             status = folder.split(".")[1].strip()
             random.shuffle(file_list, shuffleorder)
             for eachfile in file_list:
-                if train_count <= total_train:
+                if train_count < total_train:
                     fp_train.write(eachfile + "," + status + "\n")
                     train_count += 1
                     continue
